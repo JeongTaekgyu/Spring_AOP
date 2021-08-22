@@ -15,7 +15,9 @@ import java.sql.SQLOutput;
 @Component
 public class ParameterAop {
 
-    // 포인트 컷?
+    // 포인트 컷? - 기능을 어디에 적용시킬지, 메서드? Annotation? 등 AOP를 적용 시킬 지점을 설정
+    // 부가가능이 적용될 메소드를 선정하는 방법이다
+    // 어드바이스가 적용될 조인포인트 중 실제 부가기능이 적용될 조인포인트를 선별하는 기능이라고 보면 된다.
     @Pointcut("execution(* com.example.aop.controller..*.*(..))")
     private void cut(){
 
